@@ -12,8 +12,9 @@ const CreatePrompt = () => {
     tag: "",
   });
   const router = useRouter();
+  const { data: session } = useSession();
 
-  const createPrompt = async (e) => {
+  const createPromptButton = async (e) => {
     e.preventDefault();
     setSubmitting(true);
 
@@ -39,7 +40,7 @@ const CreatePrompt = () => {
       post={post}
       setPost={setPost}
       submitting={submitting}
-      handleSubmit={createPrompt}
+      handleSubmit={createPromptButton}
     ></Form>
   );
 };
