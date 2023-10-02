@@ -28,7 +28,7 @@ const feed = () => {
     const fetchpost = async () => {
       const resp = await fetch("api/prompt");
       const data = await resp.json();
-      console.log("data got from useeffect", data);
+
       setPosts(data);
     };
     fetchpost();
