@@ -18,19 +18,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Configure the application as below
 
-## Learn More
+## Create .env file and confiure as below
+GOOGLE_ID=//goto https://console.cloud.google.com/apis/ and create OAuth 2.0 Client IDs and configure the below
+1->  inside Authorised JavaScript originsconfigure
+  a-> http://localhost:3000 (your local host url)
+  b-> https://ai-prompt-steel.vercel.app (Live URL) 
+2-> inside  Authorised redirect URIs configure
+  a-> http://localhost:3000
+  b-> http://localhost:3000/api/auth/callback/google
+  c-> https://ai-prompt-steel.vercel.app
+  d-> https://ai-prompt-steel.vercel.app/api/auth/callback/google
 
-To learn more about Next.js, take a look at the following resources:
+GOOGLE_CLIENT_SECRET=//paste your secret here
+MONGODB_URI=//paste your mongo URI (mongodb+srv://#####.mongodb.net/?retryWrites=true&w=majority)
+NEXTAUTH_URL_INTERNAL=https://ai-prompt-steel.vercel.app/  or http://localhost:3000
+NEXTAUTH_URL=https://ai-prompt-steel.vercel.app/  or http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+NEXTAUTH_SECRET=// paste your next auth secret
